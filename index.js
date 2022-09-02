@@ -55,7 +55,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
           const result = await volunteersCollection.deleteOne(query);
           res.send(result);
              })
-      app.get("/volunteers",git push -u origin mainasync(req,res)=> {
+      app.get("/volunteers", async(req,res)=> {
         const query = {}
         const cursor = volunteersCollection.find(query);
         const result = await cursor.toArray();
